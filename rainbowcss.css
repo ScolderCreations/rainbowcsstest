@@ -1,0 +1,217 @@
+/* can you please just credit me for the css file pls pls plspls
+plsplspslsplsplsplsplsplsplsplsplsp,spslspls
+also the github repo is over here https://github.com/poIygon/rainbowcss/ */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --font: 'Roboto', sans-serif;
+    --codeFont: 'monospace';
+
+    --backgroundColour: white;
+    --backgroundColourDark: #cacaca;
+    --textColour: black;
+    --textColourLight: #646464;
+
+    --linkColor: #06f;
+    --linkHoverColor: #0044cc80;
+    --linkVisitedColor: #02c;
+
+    --gradient: linear-gradient(to right top, #9900ff, #e900c2, #ff0082, #ff0047, #ff0000);
+    --clip: text;
+    --duration: 0.5s;
+    --longDuration: 15s;
+
+    --borderRadius: 5px;
+    --borderWidth: 4px;
+    --borderShadow: 0 0 10px #b9b9b9;
+
+    --navPadding: 1.5em;
+    --padding: 0.5em 1em;
+
+    --margin: 1em 0;
+    --centreMargin: 0 auto;
+
+    --bodyWidth: 50em;
+}
+
+/* ==================================================================================================================== */
+
+body {
+    font-family: var(--font);
+    background-color: var(--backgroundColour);
+    color: var(--textColour);
+    max-width: var(--bodyWidth);
+    margin: 1em auto;
+}
+
+h1 {
+    background-image: var(--gradient);
+    background-size: 400% 400%;
+    color: transparent;
+    background-size: 400% 400%;
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+            background-clip: text;
+    animation: gradient var(--longDuration) infinite;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: bold;
+}
+
+button {
+    border: solid var(--borderWidth) var(--borderColor);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--borderShadow);
+    padding: var(--padding);
+    margin: var(--margin);
+    -webkit-transition-property: background-color;
+         -o-transition-property: background-color;
+            transition-property: background-color;
+    -webkit-transition-duration: var(--duration);
+         -o-transition-duration: var(--duration);
+            transition-duration: var(--duration);
+}
+
+button:hover {
+    background-color: white;
+}
+
+/* ================================================================= */
+
+a:link {
+    color: var(--textColour);
+    text-decoration: none;
+    border-bottom: var(--borderWidth) solid var(--linkColor);
+    -webkit-transition-property: background-color;
+         -o-transition-property: background-color;
+            transition-property: background-color;
+    -webkit-transition-duration: var(--duration);
+         -o-transition-duration: var(--duration);
+            transition-duration: var(--duration);
+}
+
+a:link:hover {
+    background-color: var(--linkHoverColor);
+    border-bottom: var(--borderWidth) solid var(--linkHoverColor);
+}
+
+a:visited {
+    color: var(--linkVisitedColor);
+    border-bottom: var(--borderWidth) solid var(--linkVisitedColor);
+}
+
+/* =============================================================================== */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* =============================================================================== */
+
+nav {
+    position: sticky;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: var(--navPadding);
+    margin: 0;
+}
+
+nav>ul>li {
+    font-size: 1.5em;
+}
+
+nav>ul>li>a:link {
+    font-weight: bold;
+    color: transparent;
+    border-bottom: none;
+    background-size: 400% 400%;
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+            background-clip: text;
+    animation: gradient var(--longDuration) infinite;
+}
+
+nav>ul>li>a:link:hover {
+    border-bottom: none;
+}
+
+/* ================================================================ */
+
+section {
+    border: solid var(--borderWidth) var(--borderColor);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--borderShadow);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+/* ===================================================================x */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: var(--borderRadius);
+}
+
+/* ====================================================================== */
+
+pre, code {
+    word-break: break-all;
+    overflow-x: auto;
+    background-color: var(--backgroundColourDark);
+    color: var(--textColourLight);
+    border-radius: var(--borderRadius);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+/* ========================================================================= */
+
+mark {
+    background-color: transparent;
+    border-bottom: var(--borderWidth) solid yellow;
+    -webkit-transition-property: background-color;
+         -o-transition-property: background-color;
+            transition-property: background-color;
+    -webkit-transition-duration: var(--duration);
+         -o-transition-duration: var(--duration);
+            transition-duration: var(--duration);
+}
+
+mark:hover {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+a {
+    background-color: transparent;
+    border-bottom: var(--borderWidth) solid #ff0000;
+    -webkit-transition-property: background-color;
+         -o-transition-property: background-color;
+            transition-property: background-color;
+    -webkit-transition-duration: var(--duration);
+         -o-transition-duration: var(--duration);
+            transition-duration: var(--duration);
+}
+
+a:hover {
+    background-color: #ff000080;
+}
