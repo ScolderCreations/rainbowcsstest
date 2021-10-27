@@ -44,6 +44,7 @@ body {
     color: var(--textColour);
     max-width: var(--bodyWidth);
     margin: 1em auto;
+    padding-left:(var(--padding));
 }
 
 h1 {
